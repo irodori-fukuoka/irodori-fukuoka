@@ -87,6 +87,20 @@
                         <p>ご相談やご連絡お気軽に</p>
                     </a>
                 </div>
+
+                <!-- 寄付・サポート -->
+                <div class="mt-lg">
+                    <a href="#" class="support-banner">
+                        <div class="support-content">
+                            <i data-lucide="gift" class="support-icon"></i>
+                            <div>
+                                <h3>寄付・サポートはコチラ</h3>
+                                <p>皆様の温かいご支援が、ママと子どもの居場所づくりに繋がります</p>
+                            </div>
+                        </div>
+                        <div class="support-arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                </div>
             </div>
 
             <!-- irodoriについて -->
@@ -150,15 +164,19 @@
                             <h2 class="subsection-title"><i data-lucide="book-open"></i> ママ向け講座</h2>
                             <img src="images/section_lecture.png" alt="ママ向け講座" class="content-img mt-sm mb-md">
                             <p>月1回 第3木曜日に、北九州市内で開催しています。<br>子育てや心と体のケアについて、医療者の視点を取り入れた講座を行っています。</p>
+                            <ul class="activity-topics mt-sm mb-0 p-md bg-sub border-radius-md" style="list-style-type: none;">
+                                <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check-circle-2" style="color: var(--color-main); width: 16px;"></i> 産婦人科医の痛くないお産のおはなし</li>
+                                <li style="display: flex; align-items: center; gap: 8px;"><i data-lucide="check-circle-2" style="color: var(--color-main); width: 16px;"></i> 0歳からの性教育</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="card mb-lg line-left">
                         <div class="card-body">
                             <h2 class="subsection-title"><i data-lucide="tent"></i> irodoriマルシェ</h2>
-                            <img src="images/section_marche.png" alt="irodoriマルシェ" class="content-img mt-sm mb-md">
+                            <img src="images/section_marche_updated.jpg" alt="irodoriマルシェ" class="content-img mt-sm mb-md">
                             <p>地域の親子やご家族が気軽に集まれるイベントとして開催しています。<br>ワークショップや体験ブースなどを通して、交流やつながりを大切にした場を提供しています。</p>
-                            <a href="https://www.instagram.com/marche.irodoricafe/" target="_blank" class="inline-link mt-md"><i data-lucide="instagram"></i> 詳細はこちら</a>
+                            <a href="https://www.instagram.com/marche.irodoricafe/" target="_blank" class="inline-link mt-md"><i data-lucide="instagram"></i> irodoriマルシェインスタグラムはこちら</a>
                         </div>
                     </div>
 
@@ -256,12 +274,16 @@
                     <!-- Member 6 -->
                     <div class="member-card profile-card">
                         <div class="profile-header">
-                            <img src="images/icon_logo.png" alt="今富 礼華" class="member-icon-img">
+                            <img src="images/member_imatomi.png" alt="今富 礼華" class="member-icon-img" style="background-color: transparent; border: none; box-shadow: none;">
                             <div>
                                 <h3 class="member-name">今富 礼華</h3>
+                                <p class="member-role text-main" style="margin-top: 4px; font-size: 0.9rem; font-weight: 700;">看護師 / 保健師 / 性教育アドバイザー</p>
                             </div>
                         </div>
-                        <p class="member-job">看護師 / 保健師 <br> 性教育アドバイザー</p>
+                        <div class="member-desc" style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text);">
+                            <p>外科やICUなどで看護師として働いていましたが、三男出産を機に退職しました。</p>
+                            <p style="margin-top: 8px;">男の子ママになったことをきっかけに性教育を勉強し始め、現在は性教育アドバイザーとして「０歳からの性教育」などママ向け講座を主宰しています。</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -316,9 +338,57 @@
             <div class="container section" style="padding-top: 0;">
                 <div class="text-center mb-lg">
                     <img src="images/contact_cover.png" alt="安心・相談" class="content-img mb-lg">
-                    <p class="lead">ご相談、イベントへのご参加、各種お問い合わせは<br>LINE、InstagramのDM、またはメールにて受け付けております。</p>
+                    <p class="lead">ご相談、イベントへのご参加、各種お問い合わせは<br>下記のお問い合わせフォーム、またはLINE・Instagramより受け付けております。</p>
                     <p>どんな小さなことでもかまいません。<br>いつでもお気軽にお声がけくださいね。</p>
                 </div>
+
+                <!-- お問い合わせフォーム -->
+                <div class="contact-form-container mb-xl">
+                    <p class="mb-md" style="font-size: 0.95rem;">下記のお問い合わせフォームをご入力ください（<span class="required-badge">必須</span>は必須項目です）。</p>
+                    
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <!-- Web3Formsのアクセスキー（後ほど取得したものをここに入れます） -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <!-- メールの件名 -->
+                        <input type="hidden" name="subject" value="【irodori HP】新しいお問い合わせが届きました">
+                        
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required-badge">必須</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="山田 花子" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required-badge">必須</span></label>
+                            <div style="flex-grow: 1;">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="mail@example.com" required style="width: 100%;">
+                                <div class="form-help text-main-dark mt-sm" style="font-size: 0.85rem; font-weight: bold;">※ご入力のメールアドレスへご返信致します。</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">お問い合わせ種別</label>
+                            <select id="category" name="category" class="form-control">
+                                <option value="ご相談">ご相談</option>
+                                <option value="イベント参加について">イベント参加について</option>
+                                <option value="メンバー募集について">メンバー募集について</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required-badge">必須</span></label>
+                            <textarea id="message" name="message" class="form-control" placeholder="できるだけ詳しくご記入ください" required></textarea>
+                        </div>
+
+                        <div class="text-center mt-lg" style="display: flex; justify-content: center; gap: 16px;">
+                            <button type="reset" class="btn" style="background: white; border: 1px solid var(--color-border); color: var(--color-text);">リセット</button>
+                            <button type="submit" class="btn" style="background: #333; color: white;">確認する</button>
+                        </div>
+                    </form>
+                </div>
+
+                <h3 class="subsection-title flex-center mb-md mt-lg" style="justify-content: center; font-size: 1.1rem;">各SNS・メールからもお問い合わせ可能です</h3>
 
                 <div class="contact-links card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
                     <a href="https://line.me/R/ti/p/@631bbgmv?oat_content=url&ts=12271550" target="_blank" class="contact-card border-none">
